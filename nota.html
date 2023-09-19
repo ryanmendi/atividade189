@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reprovado ou Aprovado</h1>
+    <h2>nota1:</h2>
+    <div id="notas"></div>
+    <h2>nota2:</h2>
+    <div id="notas2"></div>
+    <h2>nota3:</h2>
+    <div id="notas3"></div>
+    <h2>Matéria:</h2>
+    <div id="materia"></div>
+    <h2>Nome aluno:</h2>
+    <div id="nomea"></div>
+    <h2>Média:</h2>
+    <div id="media"></div>
+
+<script>
+
+let notas = Number(prompt("Digite a primeira nota"));
+let notas2 = Number(prompt("Digite a segunda nota"));
+let notas3 = Number(prompt("Digite a terceira nota"));
+let materia = prompt("Digite a máteria");
+let nomea = prompt("digite o nome do aluno");
+let media = (notas+notas2+notas3)/3;
+let resultado;
+if (media<4) {
+    resultado = "Reprovado";
+}
+else if (media<7){
+    resultado = "recuperação";
+}else if (media<11){
+resultado = "aprovado";
+
+}else{
+    resultado ="esta média é invalida"
+}
+document.getElementById("notas").innerHTML = notas;
+document.getElementById("notas2").innerHTML = notas2;
+document.getElementById("notas3").innerHTML = notas3;
+document.getElementById("materia").innerHTML = materia;
+document.getElementById("nomea").innerHTML = nomea;
+document.getElementById("media").innerHTML = "Sua Média é:"+""+ media +"você esta de:"+""+ resultado;
+</script>
+
+
+</body>
+</html>
